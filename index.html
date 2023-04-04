@@ -4,36 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-    <title>Calculadora bgc</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
 </head>
 <body>
-    <div class="main">
-        <form action="" name="Calculator">
-
-            <input type="text" class="text maincolor" name="txt1" disabled>
-            <input type="text" class="text1 maincolor" name="txt12" value="C" onclick="location.reload()"><br>
-
-            <input type="button" class="num maincolor" name="btn7" value="7" onclick="displaynum(btn7.value)">
-            <input type="button" class="num maincolor" name="btn8" value="8" onclick="displaynum(btn8.value)">
-            <input type="button" class="num maincolor" name="btn9" value="9" onclick="displaynum(btn9.value)">
-            <input type="button" class="num black" name="mulbtn" value="*" onclick="displaynum(mulbtn.value)"><br>
-
-            <input type="button" class="num maincolor" name="btn4" value="4" onclick="displaynum(btn4.value)">
-            <input type="button" class="num maincolor" name="btn5" value="5" onclick="displaynum(btn5.value)">
-            <input type="button" class="num maincolor" name="btn6" value="6" onclick="displaynum(btn6.value)">
-            <input type="button" class="num black" name="divbtn" value="/" onclick="displaynum(divbtn.value)"><br>
-
-            <input type="button" class="num maincolor" name="btn1" value="1" onclick="displaynum(btn1.value)">
-            <input type="button" class="num maincolor" name="btn2" value="2" onclick="displaynum(btn2.value)">
-            <input type="button" class="num maincolor" name="btn3" value="3" onclick="displaynum(btn3.value)">
-            <input type="button" class="num black" name="subbtn" value="-" onclick="displaynum(subbtn.value)"><br>
-
-            <input type="button" class="num maincolor" name="btnp" value="." onclick="displaynum(btnp.value)">
-            <input type="button" class="num maincolor" name="btn0" value="0" onclick="displaynum(btn0.value)">
-            <input type="button" class="num ora" name="igbtn" value="=" onclick="txt1.value=eval(txt1.value)">
-            <input type="button" class="num black" name="addbtn" value="+" onclick="displaynum(addbtn.value)"><br>
-        </form>
+    <div class="container">
+        <div class="calculator dark">
+            <div class="theme-toggler active">
+                <i class="toggler-icon"></i>
+            </div>
+            <div class="display-screen">
+                <div id="display"></div>
+            </div>
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td><button class="btn-operator" id="clear">C</button></td>
+                        <td><button class="btn-operator" id="/">&divide;</button></td>
+                        <td><button class="btn-operator" id="*">&times;</button></td>
+                        <td><button class="btn-operator" id="backspace"><</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="7">7</button></td>
+                        <td><button class="btn-number" id="8">8</button></td>
+                        <td><button class="btn-number" id="9">9</button></td>
+                        <td><button class="btn-operator" id="-">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="4">4</button></td>
+                        <td><button class="btn-number" id="5">5</button></td>
+                        <td><button class="btn-number" id="6">6</button></td>
+                        <td><button class="btn-operator" id="+">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="1">1</button></td>
+                        <td><button class="btn-number" id="2">2</button></td>
+                        <td><button class="btn-number" id="3">3</button></td>
+                        <td rowspan="2"><button class="btn-equal" id="equal">=</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator" id="(">(</button></td>
+                        <td><button class="btn-number" id="0">0</button></td>
+                        <td><button class="btn-operator" id=")">)</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
     <script src="javascript.js"></script>
 </body>
